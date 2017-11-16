@@ -1,0 +1,43 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+IMG_URL	../temp.py	/^IMG_URL = 'http:\/\/media.mlive.com\/news_impact\/photo\/9933031-large.jpg'$/;"	kind:variable	line:20
+LABELS_URL	../temp.py	/^LABELS_URL = 'https:\/\/s3.amazonaws.com\/outcome-blog\/imagenet\/labels.json'$/;"	kind:variable	line:19
+bone_resnet.py	../bone_resnet.py	1;"	kind:file	line:1
+class_names	../bone_resnet.py	/^class_names = image_datasets['train'].classes$/;"	kind:variable	line:40
+criterion	../bone_resnet.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:126
+data_dir	../bone_resnet.py	/^data_dir = "\/home\/lionel\/cuhk\/bone_jpg\/"$/;"	kind:variable	line:30
+data_transforms	../bone_resnet.py	/^data_transforms = {$/;"	kind:variable	line:15
+dataloders	../bone_resnet.py	/^dataloders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=4,$/;"	kind:variable	line:35
+dataset_sizes	../bone_resnet.py	/^dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'val']}$/;"	kind:variable	line:38
+exp_lr_scheduler	../bone_resnet.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)$/;"	kind:variable	line:128
+finalconv_name	../temp.py	/^    finalconv_name = 'features' # this is the last conv layer of the network$/;"	kind:variable	line:26
+finalconv_name	../temp.py	/^    finalconv_name = 'features'$/;"	kind:variable	line:35
+finalconv_name	../temp.py	/^    finalconv_name = 'layer4'$/;"	kind:variable	line:32
+image_datasets	../bone_resnet.py	/^image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x),$/;"	kind:variable	line:32
+img_pil	../temp.py	/^img_pil = cv2.imread('\/home\/lionel\/cuhk\/bone_jpg\/val\/negative\/102.jpg')$/;"	kind:variable	line:84
+img_tensor	../temp.py	/^img_tensor = preprocess(img_tensor)$/;"	kind:variable	line:86
+img_tensor	../temp.py	/^img_tensor = torch.from_numpy(img_pil);$/;"	kind:variable	line:85
+img_variable	../temp.py	/^img_variable = Variable(img_tensor.unsqueeze(0))$/;"	kind:variable	line:87
+logit	../temp.py	/^logit = net(img_variable)$/;"	kind:variable	line:89
+mean	../temp.py	/^   mean=[0.5, 0.5, 0.5],$/;"	kind:variable	line:71
+model_ft	../bone_resnet.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:124
+model_ft	../bone_resnet.py	/^model_ft = models.resnet152(pretrained=True)    #修改最后全连接层的输出结果就行$/;"	kind:variable	line:117
+model_ft	../bone_resnet.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler,$/;"	kind:variable	line:132
+model_id	../temp.py	/^model_id = 2$/;"	kind:variable	line:23
+net	../temp.py	/^    net = models.densenet161(pretrained=True)$/;"	kind:variable	line:34
+net	../temp.py	/^    net = models.resnet152(pretrained=True)$/;"	kind:variable	line:28
+net	../temp.py	/^    net = models.squeezenet1_1(pretrained=True)$/;"	kind:variable	line:25
+net	../temp.py	/^    net = torch.load('\/home\/lionel\/pytorch\/image_classification\/bone_ct_resnet_152_25.pth', map_location=lambda storage, loc: storage)$/;"	kind:variable	line:30
+normalize	../temp.py	/^normalize = transforms.Normalize($/;"	kind:variable	line:70
+num_epochs	../bone_resnet.py	/^                       num_epochs=25)$/;"	kind:variable	line:133
+num_ftrs	../bone_resnet.py	/^num_ftrs = model_ft.fc.in_features$/;"	kind:variable	line:121
+optimizer_ft	../bone_resnet.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr = 0.001, momentum = 0.9)$/;"	kind:variable	line:127
+preprocess	../temp.py	/^preprocess = transforms.Compose([$/;"	kind:variable	line:74
+std	../temp.py	/^   std=[0.5, 0.5, 0.5]$/;"	kind:variable	line:72
+temp.py	../temp.py	1;"	kind:file	line:1
+train_model	../bone_resnet.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:44
+use_gpu	../bone_resnet.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:42

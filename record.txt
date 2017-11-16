@@ -1,0 +1,20 @@
+ori   (negative 1205
+       positive 857)
+
+raw   (negative train 712    val 89
+       positive train 453    val 57)
+flip  (negative train 1424   val 89
+       positive train 906    val 57)
+f_c   (negative train 74224  val 89
+       positive train 47920  val 57)
+
+batch 32
+                  resnet_50        resnet_18        resnet_34        densenet_121     alexnet
+raw               86.30%(98.45%)   84.93%(96.74%)   85.62%(98.88%)   84.93%(96.74%)   83.56%(84.98%)
+flip              89.04%(96.85%)   88.36%(96.78%)   87.67%(99.31%)   86.99%(99.27%)   85.62%(87.98%)
+flip(add fc100)   89.73%(98.46%)                                     89.04%(98.54%)
+
+batch 256
+                  resnet_50
+f_c(add fc100)    89.04%(100%)
+
