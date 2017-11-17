@@ -12,10 +12,12 @@ import gc
 from torch.nn import DataParallel
 
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
+optimizer_choice = 1 # 0 for sgd 1 for adam
 
 train_transforms = transforms.Compose([
-    transforms.RandomCrop(224),
+    # transforms.RandomCrop(224),
     transforms.ToTensor(),
     transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
 ])
@@ -29,11 +31,11 @@ val_transforms = transforms.Compose([
 # train_val_dir = "/home/lionel/cuhk/bone_jpg/20171105_img_min_224_flip_negative_1424_89_positive_906_57"
 
 # train_dir = "/home/lionel/cuhk/bone_jpg/20171031_img_min_224_raw_negative_712_89_positive_453_57/train"
-train_dir = "/home/lionel/cuhk/bone_jpg/20171105_img_min_224_flip_negative_1424_89_positive_906_57/train"
-# train_dir = "/home/lionel/cuhk/bone_jpg/20171106_img_train_both_224_val_min_224/train"
+# train_dir = "/home/lionel/cuhk/bone_jpg/20171105_img_min_224_flip_negative_1424_89_positive_906_57/train"
+train_dir = "/home/lionel/cuhk/bone_jpg/20171106_img_train_both_224_val_min_224/train"
 # val_dir = "/home/lionel/cuhk/bone_jpg/20171031_img_min_224_raw_negative_712_89_positive_453_57/val"
-val_dir = "/home/lionel/cuhk/bone_jpg/20171105_img_min_224_flip_negative_1424_89_positive_906_57/val"
-# val_dir = "/home/lionel/cuhk/bone_jpg/20171106_img_train_both_224_val_min_224/val"
+# val_dir = "/home/lionel/cuhk/bone_jpg/20171105_img_min_224_flip_negative_1424_89_positive_906_57/val"
+val_dir = "/home/lionel/cuhk/bone_jpg/20171106_img_train_both_224_val_min_224/val"
 
 train_dataset = datasets.ImageFolder(train_dir, train_transforms)
 val_dataset = datasets.ImageFolder(val_dir, val_transforms)
@@ -53,7 +55,7 @@ val_idx = list(range(num_val))
 
 train_loader = torch.utils.data.DataLoader(
     train_dataset,
-    batch_size=64,
+    batch_size=4,
     shuffle=True,
     num_workers=4,
     pin_memory=False
@@ -85,17 +87,17 @@ class my_resnet(torch.nn.Module):
         self.share.add_module("layer4", resnet.layer4)
         self.share.add_module("avgpool", resnet.avgpool)
 
-        self.task_2 = nn.Sequential()
+        # self.task_2 = nn.Sequential()
 
-        self.task_2.add_module("fc1", nn.Lstm())
+        # self.task_2.add_module("fc1", nn.Lstm())
 
     def forward(self, x):
         x = self.share.forward(x)
         x = x.view(-1, 2048)
         return self.task_1.forward(x)
 
-def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
-
+# def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
+def train_model(model, criterion, optimizer, num_epochs=25):
     epoch_start_time = time.time()
 
     best_model_wts = model.state_dict()
@@ -110,7 +112,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
 
         # model.train(True)
         model.train()
-        scheduler.step()
+        # scheduler.step()
         train_loss = 0.0
         train_corrects = 0
 
@@ -214,7 +216,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
     # torch.save(model, '20171106_img_min_224_flip_negative_1424_89_positive_906_57_resnet_50_batch_32_sgd_1e3_step_5_epoch_25_train_.pth')
 
     # torch.save(model, 'not_pre_20171109_img_train_both_224_val_min_224_crop_flip_negative_74224_89_positive_47920_57_resnet_50_batch_256_sgd_1e3_step_5_epoch_25_train_.pth')
-    torch.save(model, '20171115_ada.pth')
+    torch.save(model, '20171117_fc_2_ada_epoch100.pth')
     return model
 
 
@@ -223,7 +225,7 @@ num_ftrs = model_ft.fc.in_features
 model_ft.fc = nn.Linear(num_ftrs, 2)
 # model_ft = my_resnet()
 
-print(my_resnet)
+# print(my_resnet)
 
 if use_gpu:
     model_ft = model_ft.cuda()
@@ -232,12 +234,14 @@ if use_gpu:
 
 criterion = nn.CrossEntropyLoss()
 # optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)
-optimizer_ft = optim.Adam(model_ft.parameters(), lr=0.001)
-
-exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)
-
+if optimizer_choice == 0:
+    optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)
+elif optimizer_choice == 1:
+    optimizer_ft = optim.Adam(model_ft.parameters())
 # print(model_ft)
-model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)
+
+model_ft = train_model(model_ft, criterion, optimizer_ft, num_epochs=100)
 
 print('Done!')
 print('OK!')
