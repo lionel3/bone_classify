@@ -4,40 +4,435 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-IMG_URL	../temp.py	/^IMG_URL = 'http:\/\/media.mlive.com\/news_impact\/photo\/9933031-large.jpg'$/;"	kind:variable	line:20
-LABELS_URL	../temp.py	/^LABELS_URL = 'https:\/\/s3.amazonaws.com\/outcome-blog\/imagenet\/labels.json'$/;"	kind:variable	line:19
+CAMs	../bone_heatmap.py	/^    CAMs = returnCAM(features_blobs[0], weight_softmax, [idx[0]])$/;"	kind:variable	line:183
+CAMs	../bone_highlight.py	/^        CAMs = CAMs_exp0 \/ CAMs_sum$/;"	kind:variable	line:152
+CAMs	../bone_highlight.py	/^        CAMs = CAMs_exp1 \/ CAMs_sum$/;"	kind:variable	line:154
+CAMs	../bone_highlight.py	/^    CAMs = np.uint8(CAMs * 255)$/;"	kind:variable	line:156
+CAMs	../bone_scoremap.py	/^    CAMs = returnCAM(features_blobs[0], weight_softmax)$/;"	kind:variable	line:159
+CAMs_0	../bone_highlight.py	/^    CAMs_0 = returnCAM(features_blobs[0], weight_softmax, [idx[0]])$/;"	kind:variable	line:141
+CAMs_1	../bone_highlight.py	/^    CAMs_1 = returnCAM(features_blobs[0], weight_softmax, [idx[1]])$/;"	kind:variable	line:143
+CAMs_exp0	../bone_highlight.py	/^    CAMs_exp0 = np.exp(CAMs_0[0]\/255.0)$/;"	kind:variable	line:145
+CAMs_exp1	../bone_highlight.py	/^    CAMs_exp1 = np.exp(CAMs_1[0]\/255.0)$/;"	kind:variable	line:146
+CAMs_sum	../bone_highlight.py	/^    CAMs_sum = CAMs_exp0 + CAMs_exp1$/;"	kind:variable	line:148
+N_total	../triploss.py	/^N_total = 1000  # 病人数$/;"	kind:variable	line:41
+N_train	../triploss.py	/^N_train = int(N_total * 0.8)$/;"	kind:variable	line:42
+N_val	../triploss.py	/^N_val = N_total - N_train$/;"	kind:variable	line:43
+__init__	../bone_alexnet.py	/^    def __init__(self):$/;"	kind:member	line:79
+__init__	../bone_densenet.py	/^    def __init__(self):$/;"	kind:member	line:75
+__init__	../bone_heatmap.py	/^    def __init__(self):$/;"	kind:member	line:44
+__init__	../bone_resnet.py	/^    def __init__(self):$/;"	kind:member	line:76
+__init__	../triploss.py	/^    def __init__(self):$/;"	kind:member	line:18
+__init__	../vgg.py	/^    def __init__(self):$/;"	kind:member	line:37
+__init__	../vgg_2.py	/^    def __init__(self):$/;"	kind:member	line:37
+__init__	../vgg_3.py	/^    def __init__(self):$/;"	kind:member	line:37
+_scale	../vgg.py	/^def _scale(size):$/;"	kind:function	line:19
+_scale	../vgg_2.py	/^def _scale(size):$/;"	kind:function	line:19
+_scale	../vgg_3.py	/^def _scale(size):$/;"	kind:function	line:19
+batch_size	../bone_alexnet.py	/^    batch_size=32,$/;"	kind:variable	line:61
+batch_size	../bone_alexnet.py	/^    batch_size=4,$/;"	kind:variable	line:68
+batch_size	../bone_densenet.py	/^    batch_size=32,$/;"	kind:variable	line:57
+batch_size	../bone_densenet.py	/^    batch_size=4,$/;"	kind:variable	line:64
+batch_size	../bone_multi_gpu.py	/^    batch_size=120,$/;"	kind:variable	line:54
+batch_size	../bone_multi_gpu.py	/^    batch_size=120,$/;"	kind:variable	line:62
+batch_size	../bone_resnet.py	/^    batch_size=4,$/;"	kind:variable	line:58
+batch_size	../bone_resnet.py	/^    batch_size=4,$/;"	kind:variable	line:65
+batch_size	../triploss.py	/^    batch_size=36,$/;"	kind:variable	line:114
+batch_size	../triploss.py	/^    batch_size=6,$/;"	kind:variable	line:122
+batch_size	../vgg.py	/^    batch_size=32,$/;"	kind:variable	line:112
+batch_size	../vgg.py	/^    batch_size=4,$/;"	kind:variable	line:119
+batch_size	../vgg_2.py	/^    batch_size=4,$/;"	kind:variable	line:136
+batch_size	../vgg_2.py	/^    batch_size=64,$/;"	kind:variable	line:129
+batch_size	../vgg_3.py	/^    batch_size=4,$/;"	kind:variable	line:132
+batch_size	../vgg_3.py	/^    batch_size=64,$/;"	kind:variable	line:124
+bone_alexnet.py	../bone_alexnet.py	1;"	kind:file	line:1
+bone_densenet.py	../bone_densenet.py	1;"	kind:file	line:1
+bone_heatmap.py	../bone_heatmap.py	1;"	kind:file	line:1
+bone_highlight.py	../bone_highlight.py	1;"	kind:file	line:1
+bone_multi_gpu.py	../bone_multi_gpu.py	1;"	kind:file	line:1
+bone_old_resnet.py	../bone_old_resnet.py	1;"	kind:file	line:1
 bone_resnet.py	../bone_resnet.py	1;"	kind:file	line:1
-class_names	../bone_resnet.py	/^class_names = image_datasets['train'].classes$/;"	kind:variable	line:40
-criterion	../bone_resnet.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:126
-data_dir	../bone_resnet.py	/^data_dir = "\/home\/lionel\/cuhk\/bone_jpg\/"$/;"	kind:variable	line:30
-data_transforms	../bone_resnet.py	/^data_transforms = {$/;"	kind:variable	line:15
-dataloders	../bone_resnet.py	/^dataloders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=4,$/;"	kind:variable	line:35
-dataset_sizes	../bone_resnet.py	/^dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'val']}$/;"	kind:variable	line:38
-exp_lr_scheduler	../bone_resnet.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)$/;"	kind:variable	line:128
-finalconv_name	../temp.py	/^    finalconv_name = 'features' # this is the last conv layer of the network$/;"	kind:variable	line:26
-finalconv_name	../temp.py	/^    finalconv_name = 'features'$/;"	kind:variable	line:35
-finalconv_name	../temp.py	/^    finalconv_name = 'layer4'$/;"	kind:variable	line:32
-image_datasets	../bone_resnet.py	/^image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x),$/;"	kind:variable	line:32
-img_pil	../temp.py	/^img_pil = cv2.imread('\/home\/lionel\/cuhk\/bone_jpg\/val\/negative\/102.jpg')$/;"	kind:variable	line:84
-img_tensor	../temp.py	/^img_tensor = preprocess(img_tensor)$/;"	kind:variable	line:86
-img_tensor	../temp.py	/^img_tensor = torch.from_numpy(img_pil);$/;"	kind:variable	line:85
-img_variable	../temp.py	/^img_variable = Variable(img_tensor.unsqueeze(0))$/;"	kind:variable	line:87
-logit	../temp.py	/^logit = net(img_variable)$/;"	kind:variable	line:89
-mean	../temp.py	/^   mean=[0.5, 0.5, 0.5],$/;"	kind:variable	line:71
-model_ft	../bone_resnet.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:124
-model_ft	../bone_resnet.py	/^model_ft = models.resnet152(pretrained=True)    #修改最后全连接层的输出结果就行$/;"	kind:variable	line:117
-model_ft	../bone_resnet.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler,$/;"	kind:variable	line:132
-model_id	../temp.py	/^model_id = 2$/;"	kind:variable	line:23
-net	../temp.py	/^    net = models.densenet161(pretrained=True)$/;"	kind:variable	line:34
-net	../temp.py	/^    net = models.resnet152(pretrained=True)$/;"	kind:variable	line:28
-net	../temp.py	/^    net = models.squeezenet1_1(pretrained=True)$/;"	kind:variable	line:25
-net	../temp.py	/^    net = torch.load('\/home\/lionel\/pytorch\/image_classification\/bone_ct_resnet_152_25.pth', map_location=lambda storage, loc: storage)$/;"	kind:variable	line:30
-normalize	../temp.py	/^normalize = transforms.Normalize($/;"	kind:variable	line:70
-num_epochs	../bone_resnet.py	/^                       num_epochs=25)$/;"	kind:variable	line:133
-num_ftrs	../bone_resnet.py	/^num_ftrs = model_ft.fc.in_features$/;"	kind:variable	line:121
-optimizer_ft	../bone_resnet.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr = 0.001, momentum = 0.9)$/;"	kind:variable	line:127
-preprocess	../temp.py	/^preprocess = transforms.Compose([$/;"	kind:variable	line:74
-std	../temp.py	/^   std=[0.5, 0.5, 0.5]$/;"	kind:variable	line:72
-temp.py	../temp.py	1;"	kind:file	line:1
-train_model	../bone_resnet.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:44
-use_gpu	../bone_resnet.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:42
+bone_scoremap.py	../bone_scoremap.py	1;"	kind:file	line:1
+class_names	../bone_alexnet.py	/^class_names = train_dataset.classes$/;"	kind:variable	line:74
+class_names	../bone_densenet.py	/^class_names = train_dataset.classes$/;"	kind:variable	line:70
+class_names	../bone_heatmap.py	/^class_names = ['negative', 'positive']$/;"	kind:variable	line:119
+class_names	../bone_highlight.py	/^class_names = ['negative', 'positive']$/;"	kind:variable	line:76
+class_names	../bone_multi_gpu.py	/^class_names = train_dataset.classes$/;"	kind:variable	line:69
+class_names	../bone_old_resnet.py	/^class_names = image_datasets['train'].classes$/;"	kind:variable	line:40
+class_names	../bone_resnet.py	/^class_names = train_dataset.classes$/;"	kind:variable	line:71
+class_names	../bone_scoremap.py	/^class_names = ['negative', 'positive']$/;"	kind:variable	line:82
+class_names	../vgg.py	/^class_names = train_dataset.classes$/;"	kind:variable	line:125
+class_names	../vgg_2.py	/^class_names = train_dataset.classes$/;"	kind:variable	line:142
+class_names	../vgg_3.py	/^class_names = train_dataset.classes$/;"	kind:variable	line:139
+classes	../bone_heatmap.py	/^classes = {0: 'negative', 1: 'positive'}$/;"	kind:variable	line:156
+classes	../bone_highlight.py	/^classes = {0: 'negative', 1: 'positive'}$/;"	kind:variable	line:114
+classes	../bone_scoremap.py	/^classes = {0: 'negative', 1: 'positive'}$/;"	kind:variable	line:132
+criterion	../bone_alexnet.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:220
+criterion	../bone_densenet.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:212
+criterion	../bone_multi_gpu.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:177
+criterion	../bone_old_resnet.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:143
+criterion	../bone_resnet.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:235
+criterion	../vgg.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:259
+criterion	../vgg_2.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:257
+criterion	../vgg_3.py	/^criterion = nn.CrossEntropyLoss()$/;"	kind:variable	line:258
+data_dir	../bone_old_resnet.py	/^data_dir = "\/home\/lionel\/cuhk\/bone_jpg\/20171105_img_min_224_flip_negative_1424_89_positive_906_57"$/;"	kind:variable	line:30
+data_transforms	../bone_old_resnet.py	/^data_transforms = {$/;"	kind:variable	line:15
+dataloders	../bone_old_resnet.py	/^dataloders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=32,$/;"	kind:variable	line:35
+dataset_sizes	../bone_old_resnet.py	/^dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'val']}$/;"	kind:variable	line:38
+exp_lr_scheduler	../bone_alexnet.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)$/;"	kind:variable	line:222
+exp_lr_scheduler	../bone_densenet.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)$/;"	kind:variable	line:214
+exp_lr_scheduler	../bone_multi_gpu.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)$/;"	kind:variable	line:179
+exp_lr_scheduler	../bone_old_resnet.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)$/;"	kind:variable	line:145
+exp_lr_scheduler	../bone_resnet.py	/^    exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)$/;"	kind:variable	line:239
+exp_lr_scheduler	../vgg.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)$/;"	kind:variable	line:261
+exp_lr_scheduler	../vgg_2.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)$/;"	kind:variable	line:259
+exp_lr_scheduler	../vgg_3.py	/^exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=5, gamma=0.1)$/;"	kind:variable	line:260
+f	../bone_heatmap.py	/^f = open(record_txt, 'w')$/;"	kind:variable	line:158
+f	../bone_highlight.py	/^f = open(record_txt, 'w')$/;"	kind:variable	line:116
+f	../bone_scoremap.py	/^f = open(record_txt, 'w')$/;"	kind:variable	line:134
+features_blobs	../bone_heatmap.py	/^features_blobs = []$/;"	kind:variable	line:108
+features_blobs	../bone_highlight.py	/^features_blobs = []$/;"	kind:variable	line:63
+features_blobs	../bone_scoremap.py	/^features_blobs = []$/;"	kind:variable	line:67
+file_names	../rename_files.py	/^file_names=[]$/;"	kind:variable	line:14
+file_path_name	../rename_files.py	/^    file_path_name = root_dir + '\/' + str(i).zfill(6) + '.jpg'$/;"	kind:variable	line:19
+file_path_names	../rename_files.py	/^file_path_names=[]$/;"	kind:variable	line:13
+finalconv_name	../bone_heatmap.py	/^finalconv_name = 'layer4'$/;"	kind:variable	line:84
+finalconv_name	../bone_highlight.py	/^finalconv_name = 'layer4'$/;"	kind:variable	line:56
+finalconv_name	../bone_scoremap.py	/^finalconv_name = 'layer4'$/;"	kind:variable	line:60
+forward	../bone_alexnet.py	/^    def forward(self, x):$/;"	kind:member	line:96
+forward	../bone_densenet.py	/^    def forward(self, x):$/;"	kind:member	line:92
+forward	../bone_heatmap.py	/^    def forward(self, x):$/;"	kind:member	line:62
+forward	../bone_resnet.py	/^    def forward(self, x):$/;"	kind:member	line:94
+forward	../triploss.py	/^    def forward(self, x):$/;"	kind:member	line:32
+forward	../vgg.py	/^    def forward(self, x):$/;"	kind:member	line:50
+forward	../vgg_2.py	/^    def forward(self, x):$/;"	kind:member	line:61
+forward	../vgg_3.py	/^    def forward(self, x):$/;"	kind:member	line:50
+get_all_files	../bone_heatmap.py	/^def get_all_files(root_dir, file_paths, file_names):$/;"	kind:function	line:33
+get_all_files	../bone_highlight.py	/^def get_all_files(root_dir, file_paths, file_names):$/;"	kind:function	line:28
+get_all_files	../bone_scoremap.py	/^def get_all_files(root_dir, file_paths, file_names):$/;"	kind:function	line:29
+get_all_files	../rename_files.py	/^def get_all_files(root_dir, file_paths, file_names):$/;"	kind:function	line:3
+h_x	../bone_heatmap.py	/^    h_x = F.softmax(logit).data.squeeze()$/;"	kind:variable	line:169
+h_x	../bone_highlight.py	/^    h_x = F.softmax(logit).data.squeeze()$/;"	kind:variable	line:127
+h_x	../bone_scoremap.py	/^    h_x = F.softmax(logit).data.squeeze()$/;"	kind:variable	line:145
+heatmap	../bone_heatmap.py	/^    heatmap = cv2.applyColorMap(cv2.resize(CAMs[0], (width, height)), cv2.COLORMAP_JET)$/;"	kind:variable	line:189
+heatmap	../bone_highlight.py	/^    heatmap = cv2.applyColorMap(cv2.resize(CAMs, (width, height)), cv2.COLORMAP_JET)$/;"	kind:variable	line:163
+heatmap	../bone_scoremap.py	/^    heatmap = cv2.applyColorMap(cv2.resize(CAMs, (width, height)), cv2.COLORMAP_JET)$/;"	kind:variable	line:166
+heatmap_dir	../bone_heatmap.py	/^heatmap_dir = '\/home\/lionel\/cuhk\/bone_jpg\/heatmap\/' + mode$/;"	kind:variable	line:142
+heatmap_dir	../bone_highlight.py	/^heatmap_dir = '\/home\/lionel\/cuhk\/bone_jpg\/heatmap\/' + mode$/;"	kind:variable	line:100
+heatmap_dir	../bone_scoremap.py	/^heatmap_dir = '\/home\/lionel\/cuhk\/bone_jpg\/heatmap\/' + mode$/;"	kind:variable	line:118
+heatmap_name	../bone_heatmap.py	/^    heatmap_name = heatmap_dir + '\/' + val_file_names[i]$/;"	kind:variable	line:195
+heatmap_name	../bone_highlight.py	/^    heatmap_name = heatmap_dir + '\/' + val_file_names[i]$/;"	kind:variable	line:169
+heatmap_name	../bone_scoremap.py	/^    heatmap_name = heatmap_dir + '\/' + val_file_names[i]$/;"	kind:variable	line:172
+hook_feature	../bone_heatmap.py	/^def hook_feature(module, input, output):$/;"	kind:function	line:110
+hook_feature	../bone_highlight.py	/^def hook_feature(module, input, output):$/;"	kind:function	line:65
+hook_feature	../bone_scoremap.py	/^def hook_feature(module, input, output):$/;"	kind:function	line:70
+idx	../triploss.py	/^    idx = np.random.randint(0, N_train - 1)$/;"	kind:variable	line:55
+idx	../triploss.py	/^    idx = np.random.randint(0, N_train - 1)$/;"	kind:variable	line:63
+idx	../triploss.py	/^    idx = np.random.randint(0, N_val - 1)$/;"	kind:variable	line:74
+idx	../triploss.py	/^    idx = np.random.randint(0, N_val - 1)$/;"	kind:variable	line:82
+image_datasets	../bone_old_resnet.py	/^image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x),$/;"	kind:variable	line:32
+img	../bone_heatmap.py	/^    img = cv2.imread(val_file_paths[i])$/;"	kind:variable	line:187
+img	../bone_highlight.py	/^    img = cv2.imread(val_file_paths[i])$/;"	kind:variable	line:161
+img	../bone_scoremap.py	/^    img = cv2.imread(val_file_paths[i])$/;"	kind:variable	line:164
+img_pil	../bone_heatmap.py	/^    img_pil = Image.open(val_file_paths[i])$/;"	kind:variable	line:163
+img_pil	../bone_highlight.py	/^    img_pil = Image.open(val_file_paths[i])$/;"	kind:variable	line:121
+img_pil	../bone_scoremap.py	/^    img_pil = Image.open(val_file_paths[i])$/;"	kind:variable	line:139
+img_tensor	../bone_heatmap.py	/^    img_tensor = preprocess(img_pil)$/;"	kind:variable	line:164
+img_tensor	../bone_highlight.py	/^    img_tensor = preprocess(img_pil)$/;"	kind:variable	line:122
+img_tensor	../bone_scoremap.py	/^    img_tensor = preprocess(img_pil)$/;"	kind:variable	line:140
+img_variable	../bone_heatmap.py	/^    img_variable = Variable(img_tensor.unsqueeze(0))$/;"	kind:variable	line:165
+img_variable	../bone_highlight.py	/^    img_variable = Variable(img_tensor.unsqueeze(0))$/;"	kind:variable	line:123
+img_variable	../bone_scoremap.py	/^    img_variable = Variable(img_tensor.unsqueeze(0))$/;"	kind:variable	line:141
+indices	../bone_multi_gpu.py	/^indices = list(range(num_train_val))$/;"	kind:variable	line:37
+info	../bone_heatmap.py	/^def info(variable):$/;"	kind:function	line:17
+info	../bone_highlight.py	/^def info(variable):$/;"	kind:function	line:13
+info	../bone_scoremap.py	/^def info(variable):$/;"	kind:function	line:13
+k	../triploss.py	/^    k = np.random.randint(0, 1)$/;"	kind:variable	line:58
+k	../triploss.py	/^    k = np.random.randint(0, 1)$/;"	kind:variable	line:66
+k	../triploss.py	/^    k = np.random.randint(0, 1)$/;"	kind:variable	line:77
+k	../triploss.py	/^    k = np.random.randint(0, 1)$/;"	kind:variable	line:85
+labels	../triploss.py	/^labels = np.zeros([N_total * 4, ])$/;"	kind:variable	line:44
+logit	../bone_heatmap.py	/^    logit = net(img_variable.cuda())$/;"	kind:variable	line:167
+logit	../bone_highlight.py	/^    logit = net(img_variable.cuda())$/;"	kind:variable	line:125
+logit	../bone_scoremap.py	/^    logit = net(img_variable.cuda())$/;"	kind:variable	line:143
+main	../triploss.py	/^def main():$/;"	kind:function	line:247
+make_dataset.py	../make_dataset.py	1;"	kind:file	line:1
+mode	../bone_heatmap.py	/^mode = 'negative'$/;"	kind:variable	line:68
+mode	../bone_highlight.py	/^mode = 'positive'$/;"	kind:variable	line:37
+mode	../bone_scoremap.py	/^mode = 'negative'$/;"	kind:variable	line:39
+model_ft	../bone_alexnet.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:216
+model_ft	../bone_alexnet.py	/^model_ft = models.alexnet(pretrained=True)$/;"	kind:variable	line:203
+model_ft	../bone_alexnet.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)$/;"	kind:variable	line:225
+model_ft	../bone_densenet.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:208
+model_ft	../bone_densenet.py	/^model_ft = models.densenet121(pretrained=True)$/;"	kind:variable	line:200
+model_ft	../bone_densenet.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)$/;"	kind:variable	line:217
+model_ft	../bone_multi_gpu.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:173
+model_ft	../bone_multi_gpu.py	/^model_ft = DataParallel(model_ft)$/;"	kind:variable	line:175
+model_ft	../bone_multi_gpu.py	/^model_ft = models.resnet50(pretrained=True)$/;"	kind:variable	line:169
+model_ft	../bone_multi_gpu.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=1)$/;"	kind:variable	line:182
+model_ft	../bone_old_resnet.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:141
+model_ft	../bone_old_resnet.py	/^model_ft = models.resnet50(pretrained=True)    #修改最后全连接层的输出结果就行$/;"	kind:variable	line:134
+model_ft	../bone_old_resnet.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler,$/;"	kind:variable	line:153
+model_ft	../bone_resnet.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:231
+model_ft	../bone_resnet.py	/^model_ft = models.resnet50(pretrained=True)$/;"	kind:variable	line:223
+model_ft	../bone_resnet.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, num_epochs=100)$/;"	kind:variable	line:244
+model_ft	../vgg.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:255
+model_ft	../vgg.py	/^model_ft = my_vgg()$/;"	kind:variable	line:250
+model_ft	../vgg.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)$/;"	kind:variable	line:264
+model_ft	../vgg_2.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:253
+model_ft	../vgg_2.py	/^model_ft = my_vgg()$/;"	kind:variable	line:248
+model_ft	../vgg_2.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)$/;"	kind:variable	line:262
+model_ft	../vgg_3.py	/^    model_ft = model_ft.cuda()$/;"	kind:variable	line:254
+model_ft	../vgg_3.py	/^model_ft = my_vgg()$/;"	kind:variable	line:245
+model_ft	../vgg_3.py	/^model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)$/;"	kind:variable	line:263
+my_resnet	../bone_alexnet.py	/^class my_resnet(torch.nn.Module):$/;"	kind:class	line:78
+my_resnet	../bone_densenet.py	/^class my_resnet(torch.nn.Module):$/;"	kind:class	line:74
+my_resnet	../bone_heatmap.py	/^class my_resnet(torch.nn.Module):$/;"	kind:class	line:43
+my_resnet	../bone_resnet.py	/^class my_resnet(torch.nn.Module):$/;"	kind:class	line:75
+my_vgg	../triploss.py	/^class my_vgg(torch.nn.Module):$/;"	kind:class	line:17
+my_vgg	../vgg.py	/^class my_vgg(torch.nn.Module):$/;"	kind:class	line:36
+my_vgg	../vgg_2.py	/^class my_vgg(torch.nn.Module):$/;"	kind:class	line:36
+my_vgg	../vgg_3.py	/^class my_vgg(torch.nn.Module):$/;"	kind:class	line:36
+net	../bone_heatmap.py	/^net = net.module$/;"	kind:variable	line:102
+net	../bone_heatmap.py	/^net = torch.load('\/home\/lionel\/pytorch\/bone_classify\/20171106_img_train_both_224_'$/;"	kind:variable	line:91
+net	../bone_highlight.py	/^net = torch.load('\/home\/lionel\/pytorch\/bone_classify\/20171031_bone_resnet_50_25_2.pth')$/;"	kind:variable	line:52
+net	../bone_scoremap.py	/^net = torch.load('\/home\/lionel\/pytorch\/bone_classify\/20171031_bone_resnet_50_25_2.pth')$/;"	kind:variable	line:55
+num_all	../triploss.py	/^num_all = len(train_dataset)$/;"	kind:variable	line:108
+num_all	../vgg.py	/^num_all = len(train_dataset)$/;"	kind:variable	line:71
+num_all	../vgg_2.py	/^num_all = len(train_dataset)$/;"	kind:variable	line:89
+num_all	../vgg_3.py	/^num_all = len(train_dataset)$/;"	kind:variable	line:69
+num_all	../vgg_3.py	/^num_all = len(train_dataset)$/;"	kind:variable	line:71
+num_epochs	../bone_old_resnet.py	/^                       num_epochs=25)$/;"	kind:variable	line:154
+num_ftrs	../bone_densenet.py	/^num_ftrs = model_ft.classifier.in_features$/;"	kind:variable	line:201
+num_ftrs	../bone_multi_gpu.py	/^num_ftrs = model_ft.fc.in_features$/;"	kind:variable	line:170
+num_ftrs	../bone_old_resnet.py	/^num_ftrs = model_ft.fc.in_features$/;"	kind:variable	line:136
+num_ftrs	../bone_resnet.py	/^num_ftrs = model_ft.fc.in_features$/;"	kind:variable	line:224
+num_train	../bone_alexnet.py	/^num_train = len(train_dataset)$/;"	kind:variable	line:46
+num_train	../bone_densenet.py	/^num_train = len(train_dataset)$/;"	kind:variable	line:42
+num_train	../bone_multi_gpu.py	/^num_train = num_train_val - num_val$/;"	kind:variable	line:41
+num_train	../bone_resnet.py	/^num_train = len(train_dataset)$/;"	kind:variable	line:43
+num_train	../triploss.py	/^num_train = len(train_idx)$/;"	kind:variable	line:109
+num_train	../vgg.py	/^num_train = len(train_end_idx)$/;"	kind:variable	line:106
+num_train	../vgg_2.py	/^num_train = len(train_end_idx)$/;"	kind:variable	line:124
+num_train	../vgg_3.py	/^num_train = len(train_end_idx)$/;"	kind:variable	line:119
+num_train_val	../bone_alexnet.py	/^num_train_val = num_train + num_val$/;"	kind:variable	line:49
+num_train_val	../bone_densenet.py	/^num_train_val = num_train + num_val$/;"	kind:variable	line:45
+num_train_val	../bone_multi_gpu.py	/^num_train_val = len(train_dataset)$/;"	kind:variable	line:33
+num_train_val	../bone_resnet.py	/^num_train_val = num_train + num_val$/;"	kind:variable	line:46
+num_val	../bone_alexnet.py	/^num_val = len(val_dataset)$/;"	kind:variable	line:47
+num_val	../bone_densenet.py	/^num_val = len(val_dataset)$/;"	kind:variable	line:43
+num_val	../bone_multi_gpu.py	/^num_val = split$/;"	kind:variable	line:40
+num_val	../bone_resnet.py	/^num_val = len(val_dataset)$/;"	kind:variable	line:44
+num_val	../triploss.py	/^num_val = len(val_idx)$/;"	kind:variable	line:110
+num_val	../vgg.py	/^num_val = len(val_idx)$/;"	kind:variable	line:107
+num_val	../vgg_2.py	/^num_val = len(val_idx)$/;"	kind:variable	line:125
+num_val	../vgg_3.py	/^num_val = len(val_idx)$/;"	kind:variable	line:120
+num_workers	../bone_alexnet.py	/^    num_workers=4,$/;"	kind:variable	line:63
+num_workers	../bone_alexnet.py	/^    num_workers=4,$/;"	kind:variable	line:70
+num_workers	../bone_densenet.py	/^    num_workers=4,$/;"	kind:variable	line:59
+num_workers	../bone_densenet.py	/^    num_workers=4,$/;"	kind:variable	line:66
+num_workers	../bone_multi_gpu.py	/^    num_workers=4,$/;"	kind:variable	line:57
+num_workers	../bone_multi_gpu.py	/^    num_workers=4,$/;"	kind:variable	line:65
+num_workers	../bone_resnet.py	/^    num_workers=4,$/;"	kind:variable	line:60
+num_workers	../bone_resnet.py	/^    num_workers=4,$/;"	kind:variable	line:67
+num_workers	../triploss.py	/^    num_workers=4,$/;"	kind:variable	line:116
+num_workers	../triploss.py	/^    num_workers=4,$/;"	kind:variable	line:124
+num_workers	../vgg.py	/^    num_workers=4,$/;"	kind:variable	line:114
+num_workers	../vgg.py	/^    num_workers=4,$/;"	kind:variable	line:121
+num_workers	../vgg_2.py	/^    num_workers=4,$/;"	kind:variable	line:131
+num_workers	../vgg_2.py	/^    num_workers=4,$/;"	kind:variable	line:138
+num_workers	../vgg_3.py	/^    num_workers=4,$/;"	kind:variable	line:127
+num_workers	../vgg_3.py	/^    num_workers=4,$/;"	kind:variable	line:135
+optimizer_choice	../bone_resnet.py	/^optimizer_choice = 1 # 0 for sgd 1 for adam$/;"	kind:variable	line:17
+optimizer_ft	../bone_alexnet.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)$/;"	kind:variable	line:221
+optimizer_ft	../bone_densenet.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)$/;"	kind:variable	line:213
+optimizer_ft	../bone_multi_gpu.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)$/;"	kind:variable	line:178
+optimizer_ft	../bone_old_resnet.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr = 0.001, momentum = 0.9)$/;"	kind:variable	line:144
+optimizer_ft	../bone_resnet.py	/^    optimizer_ft = optim.Adam(model_ft.parameters())$/;"	kind:variable	line:241
+optimizer_ft	../bone_resnet.py	/^    optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001)$/;"	kind:variable	line:238
+optimizer_ft	../vgg.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)$/;"	kind:variable	line:260
+optimizer_ft	../vgg_2.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)$/;"	kind:variable	line:258
+optimizer_ft	../vgg_3.py	/^optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)$/;"	kind:variable	line:259
+params	../bone_heatmap.py	/^params = list(net.parameters())$/;"	kind:variable	line:116
+params	../bone_highlight.py	/^params = list(net.parameters())$/;"	kind:variable	line:71
+params	../bone_scoremap.py	/^params = list(net.parameters())$/;"	kind:variable	line:77
+pin_memory	../bone_alexnet.py	/^    pin_memory=False$/;"	kind:variable	line:64
+pin_memory	../bone_alexnet.py	/^    pin_memory=False$/;"	kind:variable	line:71
+pin_memory	../bone_densenet.py	/^    pin_memory=False$/;"	kind:variable	line:60
+pin_memory	../bone_densenet.py	/^    pin_memory=False$/;"	kind:variable	line:67
+pin_memory	../bone_multi_gpu.py	/^    pin_memory=False$/;"	kind:variable	line:58
+pin_memory	../bone_multi_gpu.py	/^    pin_memory=False$/;"	kind:variable	line:66
+pin_memory	../bone_resnet.py	/^    pin_memory=False$/;"	kind:variable	line:61
+pin_memory	../bone_resnet.py	/^    pin_memory=False$/;"	kind:variable	line:68
+pin_memory	../triploss.py	/^    pin_memory=False$/;"	kind:variable	line:117
+pin_memory	../triploss.py	/^    pin_memory=False$/;"	kind:variable	line:125
+pin_memory	../vgg.py	/^    pin_memory=False$/;"	kind:variable	line:115
+pin_memory	../vgg.py	/^    pin_memory=False$/;"	kind:variable	line:122
+pin_memory	../vgg_2.py	/^    pin_memory=False$/;"	kind:variable	line:132
+pin_memory	../vgg_2.py	/^    pin_memory=False$/;"	kind:variable	line:139
+pin_memory	../vgg_3.py	/^    pin_memory=False$/;"	kind:variable	line:128
+pin_memory	../vgg_3.py	/^    pin_memory=False$/;"	kind:variable	line:136
+preprocess	../bone_heatmap.py	/^preprocess = transforms.Compose([$/;"	kind:variable	line:135
+preprocess	../bone_highlight.py	/^preprocess = transforms.Compose([$/;"	kind:variable	line:93
+preprocess	../bone_scoremap.py	/^preprocess = transforms.Compose([$/;"	kind:variable	line:111
+record_txt	../bone_heatmap.py	/^record_txt = '\/home\/lionel\/cuhk\/bone_jpg\/' + mode + '_record.txt'$/;"	kind:variable	line:144
+record_txt	../bone_highlight.py	/^record_txt = '\/home\/lionel\/cuhk\/bone_jpg\/' + mode + '_record.txt'$/;"	kind:variable	line:102
+record_txt	../bone_scoremap.py	/^record_txt = '\/home\/lionel\/cuhk\/bone_jpg\/' + mode + '_record.txt'$/;"	kind:variable	line:120
+rename_files.py	../rename_files.py	1;"	kind:file	line:1
+resize	../vgg.py	/^    def resize(im):$/;"	kind:function	line:20
+resize	../vgg_2.py	/^    def resize(im):$/;"	kind:function	line:20
+resize	../vgg_3.py	/^    def resize(im):$/;"	kind:function	line:20
+returnCAM	../bone_heatmap.py	/^def returnCAM(feature_conv, weight_softmax, class_idx):$/;"	kind:function	line:121
+returnCAM	../bone_highlight.py	/^def returnCAM(feature_conv, weight_softmax, class_idx):$/;"	kind:function	line:78
+returnCAM	../bone_scoremap.py	/^def returnCAM(feature_conv, weight_softmax):$/;"	kind:function	line:84
+root_dir	../bone_heatmap.py	/^root_dir = "\/home\/lionel\/cuhk\/bone_jpg\/20171031_img_min_224_raw_negative_712_89_positive_453_57\/val\/" + mode$/;"	kind:variable	line:69
+root_dir	../bone_highlight.py	/^root_dir = "\/home\/lionel\/cuhk\/bone_jpg\/val\/" + mode$/;"	kind:variable	line:38
+root_dir	../bone_scoremap.py	/^root_dir = "\/home\/lionel\/cuhk\/bone_jpg\/val\/" + mode$/;"	kind:variable	line:40
+root_dir	../rename_files.py	/^root_dir = '\/home\/lionel\/Desktop\/bone_jpg\/positive_ori'$/;"	kind:variable	line:12
+sampler	../bone_multi_gpu.py	/^    sampler=train_sampler,$/;"	kind:variable	line:56
+sampler	../bone_multi_gpu.py	/^    sampler=val_sampler,$/;"	kind:variable	line:64
+sampler	../triploss.py	/^    sampler=train_idx,$/;"	kind:variable	line:115
+sampler	../triploss.py	/^    sampler=val_idx,$/;"	kind:variable	line:123
+sampler	../vgg.py	/^    sampler=train_end_idx,$/;"	kind:variable	line:113
+sampler	../vgg.py	/^    sampler=val_idx,$/;"	kind:variable	line:120
+sampler	../vgg_2.py	/^    sampler=train_end_idx,$/;"	kind:variable	line:130
+sampler	../vgg_2.py	/^    sampler=val_idx,$/;"	kind:variable	line:137
+sampler	../vgg_3.py	/^    sampler=train_end_idx,$/;"	kind:variable	line:125
+sampler	../vgg_3.py	/^    sampler=val_idx,$/;"	kind:variable	line:133
+scoremap	../bone_heatmap.py	/^    scoremap = heatmap * 0.3 + img * 0.5$/;"	kind:variable	line:191
+scoremap	../bone_highlight.py	/^    scoremap = heatmap * 0.3 + img * 0.5$/;"	kind:variable	line:165
+scoremap	../bone_scoremap.py	/^    scoremap = heatmap * 0.3 + img * 0.5$/;"	kind:variable	line:168
+scoremap_dir	../bone_heatmap.py	/^scoremap_dir = '\/home\/lionel\/cuhk\/bone_jpg\/scoremap\/' + mode$/;"	kind:variable	line:141
+scoremap_dir	../bone_highlight.py	/^scoremap_dir = '\/home\/lionel\/cuhk\/bone_jpg\/scoremap\/' + mode$/;"	kind:variable	line:99
+scoremap_dir	../bone_scoremap.py	/^scoremap_dir = '\/home\/lionel\/cuhk\/bone_jpg\/scoremap\/' + mode$/;"	kind:variable	line:117
+scoremap_name	../bone_heatmap.py	/^    scoremap_name = scoremap_dir + '\/' + val_file_names[i]$/;"	kind:variable	line:193
+scoremap_name	../bone_highlight.py	/^    scoremap_name = scoremap_dir + '\/' + val_file_names[i]$/;"	kind:variable	line:167
+scoremap_name	../bone_scoremap.py	/^    scoremap_name = scoremap_dir + '\/' + val_file_names[i]$/;"	kind:variable	line:170
+shuffle	../bone_alexnet.py	/^    shuffle=False,$/;"	kind:variable	line:69
+shuffle	../bone_alexnet.py	/^    shuffle=True,$/;"	kind:variable	line:62
+shuffle	../bone_densenet.py	/^    shuffle=False,$/;"	kind:variable	line:65
+shuffle	../bone_densenet.py	/^    shuffle=True,$/;"	kind:variable	line:58
+shuffle	../bone_resnet.py	/^    shuffle=False,$/;"	kind:variable	line:66
+shuffle	../bone_resnet.py	/^    shuffle=True,$/;"	kind:variable	line:59
+split	../bone_multi_gpu.py	/^split = int(np.floor(valid_portion * num_train_val))$/;"	kind:variable	line:38
+test_model	../triploss.py	/^def test_model(model, criterion):$/;"	kind:function	line:225
+train_dataset	../bone_alexnet.py	/^train_dataset = datasets.ImageFolder(train_dir, train_transforms)$/;"	kind:variable	line:43
+train_dataset	../bone_densenet.py	/^train_dataset = datasets.ImageFolder(train_dir, train_transforms)$/;"	kind:variable	line:39
+train_dataset	../bone_multi_gpu.py	/^train_dataset = datasets.ImageFolder(train_val_dir, train_transforms)$/;"	kind:variable	line:30
+train_dataset	../bone_resnet.py	/^train_dataset = datasets.ImageFolder(train_dir, train_transforms)$/;"	kind:variable	line:40
+train_dataset	../triploss.py	/^train_dataset = datasets.ImageFolder(train_dir, train_transforms)$/;"	kind:variable	line:105
+train_dataset	../vgg.py	/^train_dataset = datasets.ImageFolder(train_dir, train_transforms)$/;"	kind:variable	line:67
+train_dataset	../vgg_2.py	/^train_dataset = datasets.ImageFolder(train_dir, train_transforms)$/;"	kind:variable	line:86
+train_dataset	../vgg_3.py	/^train_dataset = datasets.ImageFolder(train_dir, train_transforms)$/;"	kind:variable	line:66
+train_dir	../bone_alexnet.py	/^train_dir = "\/home\/lionel\/Desktop\/bone_jpg\/20171031_img_min_224_raw_negative_712_89_positive_453_57\/train"$/;"	kind:variable	line:39
+train_dir	../bone_densenet.py	/^train_dir = "\/home\/lionel\/cuhk\/bone_jpg\/20171106_img_train_both_224_val_min_224\/train"$/;"	kind:variable	line:33
+train_dir	../bone_resnet.py	/^train_dir = "\/home\/lionel\/cuhk\/bone_jpg\/20171106_img_train_both_224_val_min_224\/train"$/;"	kind:variable	line:35
+train_dir	../triploss.py	/^train_dir = "\/home\/lionel\/lxh\/VGG_tensorflow_pretrained\/Robot_arm\/data"$/;"	kind:variable	line:90
+train_dir	../vgg.py	/^train_dir = "\/home\/lionel\/lxh\/VGG_tensorflow_pretrained\/Robot_arm\/data"$/;"	kind:variable	line:64
+train_dir	../vgg_2.py	/^train_dir = "\/home\/lionel\/lxh\/VGG_tensorflow_pretrained\/Robot_arm\/data"$/;"	kind:variable	line:83
+train_dir	../vgg_3.py	/^train_dir = "\/home\/lionel\/lxh\/VGG_tensorflow_pretrained\/Robot_arm\/data"$/;"	kind:variable	line:63
+train_end_idx	../vgg.py	/^train_end_idx = []$/;"	kind:variable	line:101
+train_end_idx	../vgg_2.py	/^train_end_idx = []$/;"	kind:variable	line:119
+train_end_idx	../vgg_3.py	/^train_end_idx = []$/;"	kind:variable	line:101
+train_idx	../bone_alexnet.py	/^train_idx = list(range(num_train))$/;"	kind:variable	line:50
+train_idx	../bone_densenet.py	/^train_idx = list(range(num_train))$/;"	kind:variable	line:46
+train_idx	../bone_resnet.py	/^train_idx = list(range(num_train))$/;"	kind:variable	line:47
+train_idx	../triploss.py	/^train_idx = []$/;"	kind:variable	line:50
+train_idx	../vgg.py	/^train_idx = []$/;"	kind:variable	line:72
+train_idx	../vgg_2.py	/^train_idx = []$/;"	kind:variable	line:90
+train_idx	../vgg_3.py	/^train_idx = []$/;"	kind:variable	line:72
+train_loader	../bone_alexnet.py	/^train_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:59
+train_loader	../bone_densenet.py	/^train_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:55
+train_loader	../bone_multi_gpu.py	/^train_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:52
+train_loader	../bone_resnet.py	/^train_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:56
+train_loader	../triploss.py	/^train_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:112
+train_loader	../vgg.py	/^train_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:110
+train_loader	../vgg_2.py	/^train_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:127
+train_loader	../vgg_3.py	/^train_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:122
+train_model	../bone_alexnet.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:101
+train_model	../bone_densenet.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:97
+train_model	../bone_multi_gpu.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:73
+train_model	../bone_old_resnet.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:46
+train_model	../bone_resnet.py	/^def train_model(model, criterion, optimizer, num_epochs=25):$/;"	kind:function	line:100
+train_model	../triploss.py	/^def train_model(model, criterion, optimizer_choice, num_epochs):$/;"	kind:function	line:129
+train_model	../vgg.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:129
+train_model	../vgg_2.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:146
+train_model	../vgg_3.py	/^def train_model(model, criterion, optimizer, scheduler, num_epochs=25):$/;"	kind:function	line:143
+train_sampler	../bone_multi_gpu.py	/^train_sampler = torch.utils.data.sampler.SubsetRandomSampler(train_idx)$/;"	kind:variable	line:49
+train_sub_idx	../vgg.py	/^train_sub_idx = train_idx[::2]$/;"	kind:variable	line:99
+train_sub_idx	../vgg_2.py	/^train_sub_idx = train_idx[::2]$/;"	kind:variable	line:117
+train_sub_idx	../vgg_3.py	/^train_sub_idx = train_idx[::2]$/;"	kind:variable	line:99
+train_transforms	../bone_alexnet.py	/^train_transforms = transforms.Compose([$/;"	kind:variable	line:19
+train_transforms	../bone_densenet.py	/^train_transforms = transforms.Compose([$/;"	kind:variable	line:17
+train_transforms	../bone_multi_gpu.py	/^train_transforms = transforms.Compose([$/;"	kind:variable	line:16
+train_transforms	../bone_resnet.py	/^train_transforms = transforms.Compose([$/;"	kind:variable	line:19
+train_transforms	../triploss.py	/^train_transforms = transforms.Compose([$/;"	kind:variable	line:93
+train_transforms	../vgg.py	/^train_transforms = transforms.Compose([$/;"	kind:variable	line:24
+train_transforms	../vgg_2.py	/^train_transforms = transforms.Compose([$/;"	kind:variable	line:24
+train_transforms	../vgg_3.py	/^train_transforms = transforms.Compose([$/;"	kind:variable	line:24
+train_val_dir	../bone_multi_gpu.py	/^train_val_dir = "\/home\/lionel\/cuhk\/bone_jpg\/20171031_img_min_224"$/;"	kind:variable	line:29
+triploss.py	../triploss.py	1;"	kind:file	line:1
+use_gpu	../bone_alexnet.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:76
+use_gpu	../bone_densenet.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:72
+use_gpu	../bone_heatmap.py	/^    use_gpu = True$/;"	kind:variable	line:13
+use_gpu	../bone_multi_gpu.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:71
+use_gpu	../bone_old_resnet.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:44
+use_gpu	../bone_resnet.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:73
+use_gpu	../triploss.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:15
+use_gpu	../vgg.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:127
+use_gpu	../vgg_2.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:144
+use_gpu	../vgg_3.py	/^use_gpu = torch.cuda.is_available()$/;"	kind:variable	line:141
+val_dataset	../bone_alexnet.py	/^val_dataset = datasets.ImageFolder(val_dir, val_transforms)$/;"	kind:variable	line:44
+val_dataset	../bone_densenet.py	/^val_dataset = datasets.ImageFolder(val_dir, val_transforms)$/;"	kind:variable	line:40
+val_dataset	../bone_multi_gpu.py	/^val_dataset = datasets.ImageFolder(train_val_dir, val_transforms)$/;"	kind:variable	line:31
+val_dataset	../bone_resnet.py	/^val_dataset = datasets.ImageFolder(val_dir, val_transforms)$/;"	kind:variable	line:41
+val_dataset	../triploss.py	/^val_dataset = datasets.ImageFolder(val_dir, val_transforms)$/;"	kind:variable	line:106
+val_dataset	../vgg.py	/^val_dataset = datasets.ImageFolder(val_dir, val_transforms)$/;"	kind:variable	line:68
+val_dataset	../vgg_2.py	/^val_dataset = datasets.ImageFolder(val_dir, val_transforms)$/;"	kind:variable	line:87
+val_dataset	../vgg_3.py	/^val_dataset = datasets.ImageFolder(val_dir, val_transforms)$/;"	kind:variable	line:67
+val_dir	../bone_alexnet.py	/^val_dir = "\/home\/lionel\/Desktop\/bone_jpg\/20171031_img_min_224_raw_negative_712_89_positive_453_57\/val"$/;"	kind:variable	line:40
+val_dir	../bone_densenet.py	/^val_dir = "\/home\/lionel\/cuhk\/bone_jpg\/20171106_img_train_both_224_val_min_224\/val"$/;"	kind:variable	line:36
+val_dir	../bone_resnet.py	/^val_dir = "\/home\/lionel\/cuhk\/bone_jpg\/20171106_img_train_both_224_val_min_224\/val"$/;"	kind:variable	line:38
+val_dir	../triploss.py	/^val_dir = "\/home\/lionel\/lxh\/VGG_tensorflow_pretrained\/Robot_arm\/data"$/;"	kind:variable	line:91
+val_dir	../vgg.py	/^val_dir = "\/home\/lionel\/lxh\/VGG_tensorflow_pretrained\/Robot_arm\/data"$/;"	kind:variable	line:65
+val_dir	../vgg_2.py	/^val_dir = "\/home\/lionel\/lxh\/VGG_tensorflow_pretrained\/Robot_arm\/data"$/;"	kind:variable	line:84
+val_dir	../vgg_3.py	/^val_dir = "\/home\/lionel\/lxh\/VGG_tensorflow_pretrained\/Robot_arm\/data"$/;"	kind:variable	line:64
+val_file_names	../bone_heatmap.py	/^val_file_names = []$/;"	kind:variable	line:71
+val_file_names	../bone_highlight.py	/^val_file_names = []$/;"	kind:variable	line:40
+val_file_names	../bone_scoremap.py	/^val_file_names = []$/;"	kind:variable	line:42
+val_file_paths	../bone_heatmap.py	/^val_file_paths = []$/;"	kind:variable	line:70
+val_file_paths	../bone_highlight.py	/^val_file_paths = []$/;"	kind:variable	line:39
+val_file_paths	../bone_scoremap.py	/^val_file_paths = []$/;"	kind:variable	line:41
+val_idx	../bone_alexnet.py	/^val_idx = list(range(num_val))$/;"	kind:variable	line:51
+val_idx	../bone_densenet.py	/^val_idx = list(range(num_val))$/;"	kind:variable	line:47
+val_idx	../bone_resnet.py	/^val_idx = list(range(num_val))$/;"	kind:variable	line:48
+val_idx	../triploss.py	/^val_idx = []$/;"	kind:variable	line:51
+val_idx	../vgg.py	/^val_idx = []$/;"	kind:variable	line:73
+val_idx	../vgg_2.py	/^val_idx = []$/;"	kind:variable	line:91
+val_idx	../vgg_3.py	/^val_idx = []$/;"	kind:variable	line:73
+val_loader	../bone_alexnet.py	/^val_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:66
+val_loader	../bone_densenet.py	/^val_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:62
+val_loader	../bone_multi_gpu.py	/^val_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:60
+val_loader	../bone_resnet.py	/^val_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:63
+val_loader	../triploss.py	/^val_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:120
+val_loader	../vgg.py	/^val_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:117
+val_loader	../vgg_2.py	/^val_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:134
+val_loader	../vgg_3.py	/^val_loader = torch.utils.data.DataLoader($/;"	kind:variable	line:130
+val_sampler	../bone_multi_gpu.py	/^val_sampler = torch.utils.data.sampler.SubsetRandomSampler(val_idx)$/;"	kind:variable	line:50
+val_transforms	../bone_alexnet.py	/^val_transforms = transforms.Compose([$/;"	kind:variable	line:25
+val_transforms	../bone_densenet.py	/^val_transforms = transforms.Compose([$/;"	kind:variable	line:23
+val_transforms	../bone_multi_gpu.py	/^val_transforms = transforms.Compose([$/;"	kind:variable	line:22
+val_transforms	../bone_resnet.py	/^val_transforms = transforms.Compose([$/;"	kind:variable	line:25
+val_transforms	../triploss.py	/^val_transforms = transforms.Compose([$/;"	kind:variable	line:99
+val_transforms	../vgg.py	/^val_transforms = transforms.Compose([$/;"	kind:variable	line:30
+val_transforms	../vgg_2.py	/^val_transforms = transforms.Compose([$/;"	kind:variable	line:30
+val_transforms	../vgg_3.py	/^val_transforms = transforms.Compose([$/;"	kind:variable	line:30
+valid_portion	../bone_alexnet.py	/^valid_portion = 0.111$/;"	kind:variable	line:48
+valid_portion	../bone_densenet.py	/^valid_portion = 0.111$/;"	kind:variable	line:44
+valid_portion	../bone_multi_gpu.py	/^valid_portion = 0.111$/;"	kind:variable	line:35
+valid_portion	../bone_resnet.py	/^valid_portion = 0.111$/;"	kind:variable	line:45
+vgg.py	../vgg.py	1;"	kind:file	line:1
+vgg_2.py	../vgg_2.py	1;"	kind:file	line:1
+vgg_3.py	../vgg_3.py	1;"	kind:file	line:1
+weight_softmax	../bone_heatmap.py	/^weight_softmax = np.squeeze((params[-2].cpu().data.numpy()).dot(params[-4].cpu().data.numpy()))$/;"	kind:variable	line:117
+weight_softmax	../bone_highlight.py	/^weight_softmax = np.squeeze(params[-2].cpu().data.numpy())$/;"	kind:variable	line:72
+weight_softmax	../bone_scoremap.py	/^weight_softmax = np.squeeze(params[-2].cpu().data.numpy())$/;"	kind:variable	line:78
