@@ -104,6 +104,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
 
     best_model_wts = model.state_dict()
     best_val_accuracy = 0.0
+    best_val_accuracy = 0.0
     correspond_train_acc = 0.0
 
     for epoch in range(num_epochs):
